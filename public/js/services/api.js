@@ -5,7 +5,7 @@ angular.module('pager')
     getPages: function() {
       var deferred = $q.defer();
 
-      $http.get('http://pagerapp2.localtunnel.me/api/v1/user/' + User.getUserID() + '/pages')
+      $http.get('/api/v1/user/' + User.getUserID() + '/pages')
         .success(function(data) {
           deferred.resolve(data);
         })
@@ -19,7 +19,7 @@ angular.module('pager')
     getPage: function(pageID) {
       var deferred = $q.defer();
 
-      $http.get('http://pagerapp2.localtunnel.me/api/v1/page/' + pageID)
+      $http.get('/api/v1/page/' + pageID)
         .success(function(data) {
           deferred.resolve(data);
         })
@@ -33,7 +33,7 @@ angular.module('pager')
     savePage: function(page) {
       var deferred = $q.defer();
 
-      $http.post('http://pagerapp2.localtunnel.me/api/v1/page/', page)
+      $http.post('/api/v1/page/', page)
         .success(function(data) {
           deferred.resolve(data);
         })

@@ -17,7 +17,7 @@ gulp.task('default', ['css']);
 
 gulp.task('css', function() {
   return gulp.src(paths.sass)
-      .pipe(sass({ style: 'compressed' }).on('error', gutil.log))
+      //.pipe(sass({ style: 'compressed' }).on('error', gutil.log))
       .pipe(gulp.dest('./public/css/'))
       .pipe(minifyCss({ keepSpecialComments: 0 }))
       .pipe(rename({ extname: '.min.css' }))

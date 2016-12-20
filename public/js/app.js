@@ -1,8 +1,8 @@
-angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'LocalStorageModule', , 'ngAnimate', 'ngFacebook'])
+angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'LocalStorageModule', 'ngAnimate', 'ngFacebook'])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $facebookProvider, localStorageServiceProvider) {
   // Setup Facebook API
-  $facebookProvider.setAppId('1429537494015773');
+  $facebookProvider.setAppId('1804234483161420');
   $facebookProvider.setPermissions("manage_pages");
 
   // Setup local storage
